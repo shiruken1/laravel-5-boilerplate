@@ -34,9 +34,7 @@ class AppServiceProvider extends ServiceProvider {
 	            return new \App\Services\ResponseService;
 	        });
 
-	        if ($this->app->environment() == 'local') {
-	            $this->app->register('Laralib\L5scaffold\GeneratorsServiceProvider');
-	        }
+            $this->app->register('Laralib\L5scaffold\GeneratorsServiceProvider');
 		}
 	}
 }
